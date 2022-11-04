@@ -4,6 +4,7 @@ import (
 	"fmt"
 )
 
+// type literal declaration
 type Something string
 
 const (
