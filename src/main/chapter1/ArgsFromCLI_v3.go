@@ -17,7 +17,7 @@ import (
  */
 // Implementation of Unix Echo command
 func main() {
-	// Demo the Join function from the strings package
+	// Demo the Join function from the strings package to produce well formatted output
 	fmt.Println(strings.Join(os.Args[1:], " "))
 	// If we don't care abt formatting
 	fmt.Println(os.Args[1:], " ")
