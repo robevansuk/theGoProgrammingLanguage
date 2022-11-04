@@ -15,7 +15,8 @@ import (
  */
 // Implementation of Unix Echo command
 func main() {
-	var s, sep string
+	// modify the assignment
+	s, sep := "", ""
 	// modified the loop to use a range rather than a counter
 	for _, arg := range os.Args[1:] {
 		s += sep + arg
