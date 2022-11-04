@@ -9,7 +9,7 @@ import (
  * This application replicates the echo command in the Unix terminal
  * by returning whatever args are passed to it
  * Usage:
- * go run ArgsFromCLI.go 123 456
+ * go run ArgsFromCLI_v1.go 123 456
  * Outputs:
  * 123 456
  */
