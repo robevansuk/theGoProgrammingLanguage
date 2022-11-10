@@ -27,3 +27,7 @@ ls -al
 -rwxr-xr-x   1 user  owner  2131506 10 Nov 22:15 Lissajous_v1
 ...
 ```
+
+Lissajous_v2.go changes the palette for black and green for a "more authentic" LissajousV2.gif
+
+<img src="https://github.com/robevansuk/theGoProgrammingLanguage/blob/main/src/main/chapter1/LissajousV2.gif">
