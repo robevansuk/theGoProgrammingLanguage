@@ -18,7 +18,7 @@ const (
 )
 
 /**
- * Usage: go run Lissajous_v1.go > lissajous.gif - then open the file
+ * Usage: go run Lissajous_v1.go > Lissajous.gif - then open the file
  */
 func main() {
 	lissajous(os.Stdout)

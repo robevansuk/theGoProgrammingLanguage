@@ -18,7 +18,10 @@ const (
 )
 
 /**
- * Usage: go run Lissajous_v2.go > lissajous.gif - then open the file
+ * Usage: go run Lissajous_v2.go > LissajousV2.gif - then open the file
+ * Alternatively you can go build the Lissajous_v2.go file and run the
+ * executable, redirecting the output to a file - as mentioned in the
+ * README.md in the root of this project.
  */
 func main() {
 	lissajousV2(os.Stdout)
