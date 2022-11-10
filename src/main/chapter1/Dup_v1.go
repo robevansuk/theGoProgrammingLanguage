@@ -7,7 +7,7 @@ import (
 )
 
 // Should read contents of a file and report back if any duplicate lines are found
-// Usage: go run Unique_v1.go /Users/${me}/SOME_FILE_ON_YOUR_MACHINE
+// Usage: go run Dup_v1.go /Users/${me}/SOME_FILE_ON_YOUR_MACHINE
 func main() {
 	counts := make(map[string]int)
 	files := os.Args[1:]
