@@ -11,4 +11,19 @@ to assist in improving my overall knowledge in relation to the Go programming la
 ### Lissajous
 This example outputs a gif file which can be written/redirected from Stdout to a file:
 
-<img src="https://github.com/robevansuk/theGoProgrammingLanguage/blob/main/src/main/chapter1/lissajous.gif">
+<img src="https://github.com/robevansuk/theGoProgrammingLanguage/blob/main/src/main/chapter1/Lissajous.gif">
+
+The following command:
+```
+go build Lissajous_v1.go 
+```
+will create `Lissajous_v1` as a binary that can be executed using slash-dot notation
+
+```
+./Lissajous_vs > Lissajous.gif
+
+ls -al
+...
+-rwxr-xr-x   1 user  owner  2131506 10 Nov 22:15 Lissajous_v1
+...
+```
