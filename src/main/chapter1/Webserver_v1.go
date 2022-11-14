@@ -10,6 +10,8 @@ import (
 	"math"
 	"math/rand"
 	"net/http"
+	"strconv"
+	"strings"
 	"sync"
 )
 
@@ -30,7 +32,10 @@ func main() {
 	http.HandleFunc("/", handler) // each request calls handler func
 	http.HandleFunc("/counter", counter)
 	http.HandleFunc("/lissajous", func(w http.ResponseWriter, r *http.Request) {
-		lissajousV2(w)
+		raw := r.URL.RawQuery
+		fmt.Printf(raw)
+		cycles := strings.Split(raw, "=")
+		lissajousV2(w, cycles[1])
 	})
 	log.Fatal(http.ListenAndServe("localhost:8000", nil))
 }
@@ -60,14 +65,17 @@ func handler(w http.ResponseWriter, r *http.Request) {
 	}
 }
 
-func lissajousV2(out io.Writer) {
+func lissajousV2(out io.Writer, cyclesParam string) {
 	const (
-		cycles  = 5
 		res     = 0.001
 		size    = 100
 		nframes = 64
 		delay   = 8
 	)
+	cycles, _ := strconv.ParseFloat(cyclesParam, 64)
+	if len(cyclesParam) == 0 || cycles == 0 {
+		cycles = 1
+	}
 	freq := rand.Float64() * 3.0
 	anim := gif.GIF{LoopCount: nframes}
 	phase := 0.0
