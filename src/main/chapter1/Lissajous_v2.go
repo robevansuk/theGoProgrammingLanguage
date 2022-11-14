@@ -24,10 +24,10 @@ const (
  * README.md in the root of this project.
  */
 func main() {
-	lissajousV2(os.Stdout)
+	LissajousV2(os.Stdout)
 }
 
-func lissajousV2(out io.Writer) {
+func LissajousV2(out io.Writer) {
 	const (
 		cycles  = 5
 		res     = 0.001
